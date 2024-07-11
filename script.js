@@ -1,5 +1,6 @@
 //Je définit une constante qui contenu mon ID 'items'
 const itemsKanap = document.getElementById("items"); 
+
 //Je définit une constante qui contient l'URL de mon API
 const URL ='http://localhost:3000/api/products';
 //J'utilise la fonction asynchrone pour faire un fecth
@@ -17,7 +18,7 @@ const URL ='http://localhost:3000/api/products';
         //Je crée une boucle a travers chaque produits 
          for(let myKanap of kanap){
              let HTML =`
-            <a href="./product.html?id=${myKanap.name}">
+            <a href="./product.html?id=${myKanap._id}">
             <article>
               <img src="${myKanap.imageUrl}"  alt="${myKanap.altTxt}">
               <h3 class="productName">${myKanap.name}</h3>
